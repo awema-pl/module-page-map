@@ -1,6 +1,6 @@
 {
     "name": "awema-pl/module-page-map",
-    "description": ":description",
+    "description": "Module page map.",
     "type": "library",
     "license": "MIT",
     "authors": [

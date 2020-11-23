@@ -1,0 +1,35 @@
+.page-map
+    // position: -webkit-sticky
+    // position: sticky
+    // top: 1em
+    // bottom: 1em
+    // max-height: calc(100vh - 2em)
+    // overflow-y: auto
+
+    &__list
+        padding-left: 0
+        margin: 0
+        list-style: none
+
+    &__list-item
+
+        &.is-active
+
+            > a
+                text-decoration: underline
+                font-weight: bold
+
+        &.for-h3
+            padding-left: 1em
+
+        &.for-h4
+            padding-left: 2em
+
+        &.for-h5
+            text-transform: uppercase
+            font-size: .66em
+            line-height: 2em
+            padding-left: 5em
+
+            &:before
+                content: '-'

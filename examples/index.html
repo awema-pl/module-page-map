@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test page-map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"/>
+
+    <script>
+        const AWEMA_CONFIG = {
+            key: '5cd207e2c94eb723c3307764a5693def'
+        }
+    </script>
+
+    <!-- module -->
+    <script src="js/main.js" async defer></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- core -->
+    <script src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/base-js/v1.x.x/js/main.js"></script>
+</head>
+<body>
+    <div class="uk-section">
+
+        <div class="uk-container test">
+            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, corrupti!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quas ut sint perferendis, excepturi incidunt suscipit ad, repellendus delectus accusamus provident tempore sit inventore. Blanditiis atque veritatis non, perspiciatis itaque delectus eum, in voluptate dolorem sit esse a necessitatibus laboriosam.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis aspernatur, cumque corrupti totam ipsa eligendi a placeat odio culpa aliquam alias consequatur libero eos sint delectus architecto asperiores accusantium voluptates.</p>
+            <p>Nulla adipisci, est, voluptatum perspiciatis consequuntur eligendi voluptate quae doloribus quis, mollitia deleniti cum temporibus cupiditate possimus iure quos pariatur provident laudantium. Quisquam ducimus explicabo veritatis nulla dolores voluptates. Doloribus.</p>
+            <p>Quam ullam atque et veniam est, repellat ipsam corrupti quae perferendis quisquam expedita ducimus voluptatibus non obcaecati, voluptatem quidem officia ratione adipisci nemo nostrum! Repellendus rerum soluta reprehenderit provident saepe.</p>
+            <p>Accusantium accusamus ullam reprehenderit. Repudiandae quos doloremque laborum ipsa aperiam. Natus autem aut veniam exercitationem provident accusamus ad deleniti delectus! Cupiditate enim perferendis sunt dolores, officia veritatis ab laborum molestias?</p>
+            <p>Nam totam, esse sed architecto reiciendis quos tempora eius illo inventore eum velit neque, aspernatur accusamus, est beatae? Laboriosam nostrum odit similique ad minima aliquid cum aperiam ex praesentium quibusdam?</p>
+        </div>
+    </div>
+    <div id="awema-app" class="uk-article uk-margin-large">
+        <div class="uk-container">
+            <div class="uk-grid">
+                <aside class="uk-width-1-4@l">
+                    <page-map content="main.content" :offset="-20" :sticky="{top: 20, bottom: 20}">
+                        <template #before>
+                            <h3>Page navigation</h3>
+                            <hr>
+                        </template>
+                        <template #after>
+                            <hr>
+                            <ul class="uk-nav">
+                                <li>
+                                    <a href="https://github.com/awema-pl/awema-pl/issues" target="blank">Report an issue</a>
+                                </li>
+                                <li>
+                                    <a href="https://stackoverflow.com/questions/tagged/awema-pl" target="blank">Get help</a>
+                                </li>
+                            </ul>
+                        </template>
+                    </page-map>
+                </aside>
+                <main class="content uk-width-3-4@l">
+                    <h2>First heading</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus expedita odit dolorem placeat ut minus eum nulla, id numquam dolore quidem, cumque maxime excepturi dolores rem saepe magni fuga et?</p>
+                    <p>Adipisci, sit earum! Porro beatae vitae consectetur? Eos labore exercitationem, facilis laudantium, reiciendis vitae consectetur omnis doloremque perspiciatis, ducimus quis repellendus nobis porro totam quo minus fugiat quam nulla corrupti.</p>
+                    <h3>First subheading</h3>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+
+                    <h2>Second heading has !@#$%^&*() symbols</h2>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus expedita odit dolorem placeat ut minus eum
+                    nulla, id numquam dolore quidem, cumque maxime excepturi dolores rem saepe magni fuga et?</p>
+                    <p>Adipisci, sit earum! Porro beatae vitae consectetur? Eos labore exercitationem, facilis laudantium, reiciendis vitae
+                    consectetur omnis doloremque perspiciatis, ducimus quis repellendus nobis porro totam quo minus fugiat quam nulla
+                    corrupti.</p>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                    distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+                    <h2>Third heading</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus expedita odit dolorem placeat ut minus eum
+                    nulla, id numquam dolore quidem, cumque maxime excepturi dolores rem saepe magni fuga et?</p>
+                    <p>Adipisci, sit earum! Porro beatae vitae consectetur? Eos labore exercitationem, facilis laudantium, reiciendis vitae
+                    consectetur omnis doloremque perspiciatis, ducimus quis repellendus nobis porro totam quo minus fugiat quam nulla
+                    corrupti.</p>
+                    <h3>Second subheading of third heading</h3>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                    distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+
+                    <h2 id="has-anchor">Fourth heading</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus expedita odit dolorem placeat ut minus eum
+                        nulla, id numquam dolore quidem, cumque maxime excepturi dolores rem saepe magni fuga et?</p>
+                    <p>Adipisci, sit earum! Porro beatae vitae consectetur? Eos labore exercitationem, facilis laudantium, reiciendis vitae
+                        consectetur omnis doloremque perspiciatis, ducimus quis repellendus nobis porro totam quo minus fugiat quam nulla
+                        corrupti.</p>
+                    <h3>А это заголовок по-русски</h3>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                        distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+                    <h4>🔥 Sixs fire heading</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus expedita odit dolorem placeat ut minus eum
+                        nulla, id numquam dolore quidem, cumque maxime excepturi dolores rem saepe magni fuga et?</p>
+                    <p>Adipisci, sit earum! Porro beatae vitae consectetur? Eos labore exercitationem, facilis laudantium, reiciendis vitae
+                        consectetur omnis doloremque perspiciatis, ducimus quis repellendus nobis porro totam quo minus fugiat quam nulla
+                        corrupti.</p>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                        distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+                    <h5>Sevens heading</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus expedita odit dolorem placeat ut minus eum
+                        nulla, id numquam dolore quidem, cumque maxime excepturi dolores rem saepe magni fuga et?</p>
+                    <p>Adipisci, sit earum! Porro beatae vitae consectetur? Eos labore exercitationem, facilis laudantium, reiciendis vitae
+                        consectetur omnis doloremque perspiciatis, ducimus quis repellendus nobis porro totam quo minus fugiat quam nulla
+                        corrupti.</p>
+                    <h4>Eights <strong>subheading</strong> with <i>nested <span>children</span></i> <svg width="16" height="16" viewBox="0 0 20 20"><polyline points="2,7 10,18, 18,2" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></h4>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                        distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                    distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                    distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+                    <p>Sit repudiandae quo quidem in vel voluptate optio, cum sapiente ipsa itaque quam, quasi blanditiis deleniti incidunt
+                    distinctio possimus suscipit facere sequi et numquam repellat eum pariatur! Ex, dolore aliquid?</p>
+                </main>
+            </div>
+        </div>
+    </div>
+    <footer class="uk-section uk-section-secondary uk-height-viewport">
+        <div class="uk-container uk-text-center">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime error cum accusantium quibusdam illo officiis veniam tempore porro ipsum praesentium?</p>
+            <small>Lorem ipsum dolor sit amet.</small>
+        </div>
+    </footer>
+</body>
+</html>

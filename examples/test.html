@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Context menu component (context-menu) Documentation // Awema.PL</title>
+    <meta name="description" content="🤖 The context menu component is designed to display hidden by default list by clicking the button.  Mi...">
+    <meta name="csrf-token" content="0u1VIktH59Ab9xBIo3tQjsaqOHXr23FMpaeYBaS0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/awema-pl/page-map/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/awema-pl/page-map/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/awema-pl/page-map/img/favicons/favicon-16x16.png">
+<link rel="mask-icon" href="/assets/awema-pl/page-map/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134431636-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-134431636-1');
+</script>
+
+    <link rel="stylesheet" href="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/indigo-layout/v1.x.x/css/main.css?v=2019-03-14_15-30-12">
+
+    <style>
+        :root:not([data-dark=true]) {
+                        --tc_aside_gradient: linear-gradient(0deg,#122ACC 0%,#0B88EE);
+                        --tc_aside_gradient_header: linear-gradient(90deg,#122ACC 0%,#0B88EE);
+                    }
+    </style>
+
+
+    <!-- config -->
+    <script>AWEMA_CONFIG = {"key":"5cd207e2c94eb723c3307764a5693def","cdn":"https:\/\/cdn.awema.pl","src":{"base":"awema-pl\/base-js\/v1.x.x\/js\/main.js"},"local":{"base":"\/static\/base-js\/js\/main.js"},"theme":{"metaColor":{"dark":"#2a2a2a","light":"#0B88EE"}}}</script>
+
+    <!-- modules -->
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/context-menu/v0.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/filter-wrapper/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/form-builder/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/indigo-layout/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+            <script type="module" src="js/main.js"></script>
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/tab-builder/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/table-builder/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/theme-switcher/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+            <script type="module" src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/virtual-tour/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+    
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/context-menu/v0.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/filter-wrapper/v1.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/form-builder/v1.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/indigo-layout/v1.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/module-page-map/v1.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/tab-builder/v1.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/table-builder/v0.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+            <script nomodule src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/virtual-tour/v1.x.x/js/main.legacy.js?v=2019-03-14_15-30-12"></script>
+    
+    <!-- core -->
+            <script src="https://cdn.awema.pl/5cd207e2c94eb723c3307764a5693def/awema-pl/base-js/v1.x.x/js/main.js?v=2019-03-14_15-30-12"></script>
+    
+</head>
+
+<body>
+<div class="mainwrapper" id="awema-app">
+    <div class="frame">
+        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+            <div class="frame__overlay" v-show="$awemaLayoutCrm.togglenav || $awemaLayoutCrm.showUserMenu" @click="$awemaLayoutCrm.overlayClick"></div>
+        </transition>
+                    <div class="frame__aside" id="aside">
+                <div class="frame__aside-line">
+                    <span class="frame__aside-open g-res--tablet-lg" :class="{ active: $awemaLayoutCrm.togglenav }" @click="$awemaLayoutCrm.openNav"><span></span></span>
+                    <h2 class="frame__aside-title"><a href="/documentation/">Documentation</a></h2>
+                    <a class="btn frame__aside-callbtn" href="https://www.awema.pl/#get-started">Schedule Demo</a>                    
+                </div>
+                <nav class="frame__aside-nav" v-bind:class="{ active: $awemaLayoutCrm.togglenav }">
+                    <div class="frame__aside-mhead g-res--tablet-lg"><a class="frame__aside-close" href="" @click.prevent="$awemaLayoutCrm.openNav()"><i class="icon icon-cross"></i></a>
+                        <h4 class="frame__aside-mtitle"><span><a href="/documentation/">Documentation</a></span></h4>
+                    </div>
+                    <frame-nav :links='[{"name":"Introduction","link":"\/documentation\/"},{"name":"Quick Start","link":"\/documentation\/quick-start"},{"name":"Customization","link":"\/documentation\/customization"},{"name":"Components","slug":"components","children":[{"name":"Base JS","link":"\/documentation\/components\/base-js"},{"name":"Charts","link":"\/documentation\/components\/charts"},{"name":"Context Menu","link":"\/documentation\/components\/context-menu","active":true},{"name":"Filter Wrapper","link":"\/documentation\/components\/filter-wrapper"},{"name":"Form Builder","link":"\/documentation\/components\/form-builder"},{"name":"Indigo Layout","link":"\/documentation\/components\/indigo-layout"},{"name":"Modal Window","link":"\/documentation\/components\/modal-window"},{"name":"Page Map","link":"\/documentation\/components\/page-map"},{"name":"Tab Builder","link":"\/documentation\/components\/tab-builder"},{"name":"Table Builder","link":"\/documentation\/components\/table-builder"},{"name":"Theme Switcher","link":"\/documentation\/components\/theme-switcher"},{"name":"Virtual tour","link":"\/documentation\/components\/virtual-tour"}],"active":true}]'  expanded >
+                        <div class="ph">
+                            <div class="ph__mnav"><span class="ph__mnav-link"></span><span class="ph__mnav-title"></span></div>
+                            <ul class="ph__nav">
+                                <li><span class="ph__nav-icon"></span><span class="ph__nav-text"></span></li>
+                                <li><span class="ph__nav-icon"></span><span class="ph__nav-text"></span></li>
+                                <li><span class="ph__nav-icon"></span><span class="ph__nav-text"></span></li>
+                                <li><span class="ph__nav-icon"></span><span class="ph__nav-text"></span></li>
+                                <li><span class="ph__nav-icon"></span><span class="ph__nav-text"></span></li>
+                            </ul>
+                        </div>
+                                                    <template slot="difnav">
+                                <ul class="frame__aside-mnav">
+                                                                                                                        <li><a class="frame__aside-link" href="/">Home page</a></li>
+                                                                                                                <li class="frame__aside-link">
+                                        <theme-switcher></theme-switcher>
+                                    </li>
+
+                                </ul>
+                            </template>
+                                            </frame-nav>
+                </nav>
+            </div>
+        
+        <div class="frame__right  frame__right_nui ">
+
+            <div class="frame__header">
+                <div class="frame__header-top">
+                    <form class="frame__search" id="search" v-bind:class="{ active: $awemaLayoutCrm.showSearch }" action="js" method="get"> <span class="frame__search-link" v-on:click="$awemaLayoutCrm.showSearch = !$awemaLayoutCrm.showSearch"><i class="icon icon-search"></i></span>
+                        <div class="frame__search-hidden"><input class="frame__search-input" type="text" placeholder="Search..."><button class="frame__search-btn" type="submit">Search</button><span class="frame__search-close" v-on:click="$awemaLayoutCrm.showSearch = !$awemaLayoutCrm.showSearch"><i class="icon icon-cross"></i></span></div>
+                    </form>
+
+                    
+                                            <div class="frame__header-rlinks">
+                            <div class="frame__rccell">
+                                <theme-switcher></theme-switcher>
+                            </div>
+                                                                                                <a class="frame__header-link" href="/">Home page</a>
+                                                                                                                        <a class="btn frame__header-callbtn" href="https://www.awema.pl/#get-started">Schedule Demo</a>
+                                                    </div>
+                                    </div>
+                <div class="frame__header-line">
+                    <h1 class="frame__header-title">Context menu component (context-menu)</h1>                </div>
+            </div>
+            
+
+            <div class="frame__content">
+                <div class="frame__inlayout">
+                                            <div class="frame__inlayout-aside">
+        <page-map content=".frame__inlayout-content" :offset="-70" :sticky='{top: 15, bottom: 15}'>
+            <template slot="after">
+                <div class="page-map__links">
+                    <a href="https://github.com/awema-pl/awema-pl/issues/new" target="_blank"><i class="icon icon-git"> </i><span>Report issue</span></a>
+                    <a href="https://stackoverflow.com/questions/tagged/awema-pl" target="_blank"><i class="icon icon-question"> </i><span>Get help</span></a>
+                    <a href="https://github.com/awema-pl/wiki/edit/master/docs/components/context-menu/1.0/index.md" target="_blank"><i class="icon icon-pencil2"> </i><span>Edit this page</span></a>
+                </div>
+            </template>
+        </page-map>
+    </div>
+                                        <div class="frame__inlayout-content">
+                            <p>The context menu component is designed to display hidden by default list by clicking the button.</p>
+<p><img src="/assets/awema-pl/page-map/img/docs/context-menu.gif" alt="context-menu" /></p>
+<h2>Minimal markup</h2>
+<p>The component consists of a drop-down wrapper and elements. Without elements inside
+wrappers, it doesn't make sense, so the minimal markup looks like</p>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-button&gt;Click me!&lt;/cm-button&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<p><strong>Appearance</strong></p>
+<div class="vue-example">
+<context-menu>
+    <cm-button>Click me!</cm-button>
+</context-menu>
+</div>
+<p><strong>Generated markup</strong></p>
+<pre v-pre><code class="language-html">&lt;div class=&quot;context-menu&quot;&gt;
+    &lt;button aria-haspopup=&quot;true&quot; class=&quot;context-menu__toggler context-menu__toggler-default&quot;&gt;
+       &lt;i class=&quot;icon icon-dots&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;div aria-expanded=&quot;false&quot; class=&quot;context-menu__dropdown&quot; style=&quot;display: none;&quot;&gt;
+        &lt;ul class=&quot;context-menu__list&quot;&gt;
+            &lt;li class=&quot;cm-item&quot;&gt;
+                &lt;button class=&quot;cm-item__button&quot;&gt;Click me!&lt;/button&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><em>Opening</em> of the drop-down list is performed by pressing the opening button, <em>closing</em> it - by clicking on the same button, link or button among <a href="#elements">the context menu items</a> or by clicking outside the drop-down menu.</p>
+<h2>Wrapper component parameters <code>&lt;context-menu&gt;</code></h2>
+<div class="md-table"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>button-class</td>
+<td><strong>String</strong></td>
+<td><em>undefined</em></td>
+<td>Additional class for the button that opens list</td>
+</tr>
+<tr>
+<td>right</td>
+<td><strong>Boolean</strong></td>
+<td><code>false</code></td>
+<td>Priority in <a href="#positioning-info">locating the list</a> on the right border from the button that opens list</td>
+</tr>
+<tr>
+<td>top</td>
+<td><strong>Boolean</strong></td>
+<td><code>false</code></td>
+<td>Priority in opening the list upward <a href="#positioning-info">to be</a> at the top of the opening button</td>
+</tr>
+<tr>
+<td>auto-position</td>
+<td><strong>Boolean</strong></td>
+<td><code>true</code></td>
+<td><a href="#positioning-auto">Automatic positioning</a> of the list depending on the specified boundaries and visibility on the screen</td>
+</tr>
+<tr>
+<td>boundary</td>
+<td><strong>String</strong></td>
+<td><code>body</code></td>
+<td>Element selector - <a href="#positioning-bounds">boundaries</a> for automatic list positioning</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Positioning on the screen</h2>
+<p>The drop-down list is located relative to the opening button, and by default adjoins the lower and left borders and opens downwards.</p>
+<p><strong>Layout options</strong></p>
+<p><strong>By default</strong></p>
+<div class="vue-example">
+<context-menu :auto-position="false">
+    <cm-button>Click me!</cm-button>
+</context-menu>
+</div>
+<p><strong>Top (<code>top</code>)</strong></p>
+<div class="vue-example">
+<context-menu top :auto-position="false">
+    <cm-button>Click me!</cm-button>
+</context-menu>
+</div>
+<p><strong>Right (<code>right</code>)</strong></p>
+<div class="vue-example">
+<context-menu right :auto-position="false">
+    <cm-button>Click me!</cm-button>
+</context-menu>
+</div>
+<p><strong>Top right (<code>top</code>, <code>right</code>)</strong></p>
+<div class="vue-example">
+<context-menu top right :auto-position="false">
+    <cm-button>Click me!</cm-button>
+</context-menu>
+</div>
+<p><strong>Automatic positioning</strong>
+The specified position is only a recommendation if <code>auto-position = true</code> parameter is enabled. If at a given position the drop-down list does not appear in the visibility area or does not fit into <a href="#positioning-bounds">a restrictive container</a>, it'll change its position so that it could:</p>
+<ol>
+<li>appear on the screen as visible as possible</li>
+<li>fit into the <a href="#positioning-bounds">boundaries</a>
+</li>
+</ol>
+<div id="positioning-bounds"></div>
+<p><strong>Restrictive container</strong>
+The <code>boundary</code> property is a boundary selector, by default, or if an element is not found among the parents of the component by the selector, this container is a <code>body</code> page container.</p>
+<p><em>The drop-down list cannot be expanded downwards and to the right, but can fit into the boundaries so it opens up and to the left</em></p>
+<div class="vue-example">
+<div id="example-bounds" style="padding:50px 15px 15px; height: 100px; width: 300px; border: 1px solid gray">
+    <context-menu style="float: right" boundary="#example-bounds">
+        <cm-button>Click me!</cm-button>
+    </context-menu>
+</div>
+</div>
+<p><em>The drop-down list cannot fit into the boundaries when it opens up and to the left, so it opens down and to the left (this is a priority direction), trying also to be displayed as the most visible on the screen.</em></p>
+<div class="vue-example">
+<div id="example-bounds" style="padding:10px; height: 50px; width: 50px; border: 1px solid gray">
+    <context-menu top right boundary="#example-bounds">
+        <cm-button>Click me!</cm-button>
+        <cm-button>Click me too!</cm-button>
+        <cm-button>Click me too!</cm-button>
+    </context-menu>
+</div>
+</div>
+<h2>Context menu items</h2>
+<h3>Button &lt;cm-button&gt;</h3>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-button @click=&quot;someMethod&quot;&gt;Click me!&lt;/cm-button&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<p><em>Properties of the <code>&lt;cm-button/&gt;</code> item</em></p>
+<div class="md-table"><table>
+<thead>
+<tr>
+<th style="text-align: center">Name</th>
+<th style="text-align: center">Type</th>
+<th style="text-align: center">Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">itemClass</td>
+<td style="text-align: center"><strong>String</strong></td>
+<td style="text-align: center"><em>undefined</em></td>
+<td>Additional class for the button</td>
+</tr>
+</tbody>
+</table></div>
+<p>Event handlers should be attached to the item and additional attributes can be added. Without a handler, clicking on the button will simply close the open menu. This is the kind of markup used</p>
+<pre v-pre><code class="language-html">&lt;cm-button
+         class=&quot;list-item-class&quot;
+         item-class=&quot;item-class&quot;
+         aria-label=&quot;Awesome Button!&quot;
+         @click=&quot;$notify({group: 'right-b', type: 'sucсess', title: 'Notification!'})&quot;&gt;
+     Send notification
+&lt;/cm-button&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <cm-button
+             class="list-item-class"
+             item-class="item-class"
+             aria-label="Awesome Button!"
+             @click="$notify({group: 'right-b', type: 'sucсess', title: 'Notification!'})">
+        Send notification
+    </cm-button>
+</context-menu>
+</div>
+<p>It will be generated into such HTML, by clicking the <code>someMethod</code> method will be called:</p>
+<pre v-pre><code class="language-html">&lt;li class=&quot;cm-item list-item-class&quot;&gt;
+    &lt;button aria-label=&quot;Awesome Button!&quot; class=&quot;cm-item__button item-class&quot;&gt;
+        Send notification
+    &lt;/button&gt;
+&lt;/li&gt;
+</code></pre>
+<h3>Link &lt;cm-link&gt;</h3>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-link href=&quot;https://some.url&quot;&gt;This is a link elemen&lt;/cm-link&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <cm-link href="https://google.com" target="_blank" rel="nofollow noopener">
+         This is a link element
+    </cm-link>
+</context-menu>
+</div>
+<p><em>Properties of the <code>&lt;cm-link/&gt;</code> item</em></p>
+<div class="md-table"><table>
+<thead>
+<tr>
+<th style="text-align: center">Name</th>
+<th style="text-align: center">Type</th>
+<th style="text-align: center">Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">itemClass</td>
+<td style="text-align: center"><strong>String</strong></td>
+<td style="text-align: center"><em>undefined</em></td>
+<td>Additional class for the link</td>
+</tr>
+<tr>
+<td style="text-align: center">href*</td>
+<td style="text-align: center"><strong>String</strong></td>
+<td style="text-align: center"><em>undefined</em></td>
+<td>url or an anchor, required property</td>
+</tr>
+</tbody>
+</table></div>
+<p>It is also possible to hang event handlers on the element and add additional attributes, for example, a markup like this</p>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-link href=&quot;#anchor&quot;
+             class=&quot;list-item-class&quot;
+             item-class=&quot;item-class&quot;
+             data-prop=&quot;someProp&quot;
+             @click.prevent=&quot;someMethod&quot;&gt;
+         This is a link element
+    &lt;/cm-link&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <cm-link href="#anchor"
+             class="list-item-class"
+             item-class="item-class"
+             data-prop="someProp"
+             @click.prevent="someMethod">
+         This is a link element
+    </cm-link>
+</context-menu>
+</div>
+<p>It will be generated into such HTML, and by clicking a transition will not happen, instead <code>someMethod</code> method will be called:</p>
+<pre v-pre><code class="language-html">&lt;li class=&quot;cm-item list-item-class&quot;&gt;
+    &lt;a href=&quot;#anchor&quot; data-prop=&quot;someProp&quot; class=&quot;cm-item__link item-class&quot;&gt;
+        This is a link element
+    &lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+<h3>Separator &lt;cm-separator&gt;</h3>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-button&gt;Above separator&lt;/cm-button&gt;
+    &lt;cm-separator&gt;&lt;/cm-separator&gt;&lt;!-- separator --&gt;
+    &lt;cm-button&gt;Below separator&lt;/cm-button&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <cm-button>Above separator</cm-button>
+    <cm-separator></cm-separator>
+    <cm-button>Below separator</cm-button>
+</context-menu>
+</div>
+<h3>Panel &lt;cm-panel&gt;</h3>
+<p>The component is intended for placing content inside the context menu. See the example below.</p>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-panel&gt;
+        Default panel
+    &lt;/cm-panel&gt;
+    &lt;cm-panel secondary&gt;
+        Secondary panel
+    &lt;/cm-panel&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <cm-panel>
+        Default panel
+    </cm-panel>
+    <cm-panel secondary>
+        Secondary panel
+    </cm-panel>
+</context-menu>
+</div>
+<p><em>Properties of the <code>&lt;cm-panel/&gt;</code> item</em></p>
+<div class="md-table"><table>
+<thead>
+<tr>
+<th style="text-align: center">Name</th>
+<th style="text-align: center">Type</th>
+<th style="text-align: center">Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">secondary</td>
+<td style="text-align: center"><strong>Boolean</strong></td>
+<td style="text-align: center"><code>false</code></td>
+<td>Changes the background color to a darker one</td>
+</tr>
+</tbody>
+</table></div>
+<p>Generated markup</p>
+<pre v-pre><code class="language-html">&lt;li class=&quot;cm-item&quot;&gt;
+    &lt;div class=&quot;cm-item__panel&quot;&gt;
+        Default panel
+    &lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;cm-item&quot;&gt;
+    &lt;div class=&quot;cm-item__panel is-secondary&quot;&gt;
+        Secondary panel
+    &lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+<h3>GET parameters in the address bar &lt;cm-query&gt;</h3>
+<p>The component is intended for inserting GET parameters into the address bar of the browser without reboot (e.g. for filtering or sorting), other components can monitor these parameters and update the data.</p>
+<p><em>Properties of the <code>&lt;cm-query/&gt;</code> item</em></p>
+<div class="md-table"><table>
+<thead>
+<tr>
+<th style="text-align: center">Name</th>
+<th style="text-align: center">Type</th>
+<th style="text-align: center">Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">itemClass</td>
+<td style="text-align: center"><strong>String</strong></td>
+<td style="text-align: center"><em>undefined</em></td>
+<td>Additional class for the button</td>
+</tr>
+<tr>
+<td style="text-align: center">param*</td>
+<td style="text-align: center"><strong>Object</strong></td>
+<td style="text-align: center"><em>undefined</em></td>
+<td><em>Required Property</em>. Parameters that need to be substituted or be replaced in the address bar, and in case they coincide, the button shall become active.</td>
+</tr>
+</tbody>
+</table></div>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-query :param=&quot;{state: 'active'}&quot;&gt;
+        I am active
+    &lt;/cm-query&gt;
+    &lt;cm-query :param=&quot;{state: 'not-active'}&quot;&gt;
+        I am not active
+    &lt;/cm-query&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <cm-query :param="{state: 'active'}">
+        I am active
+    </cm-query>
+    <cm-query :param="{state: 'not-active'}">
+        I am not active
+    </cm-query>
+</context-menu>
+</div>
+<p>This is how the HTML template of the button looks like:</p>
+<pre v-pre><code class="language-html">&lt;li class=&quot;cm-item&quot;&gt;
+   &lt;button class=&quot;cm-item__button is-active&quot;&gt;
+        I am active
+    &lt;/button&gt;
+&lt;/li&gt;
+&lt;li class=&quot;cm-item&quot;&gt;
+    &lt;button class=&quot;cm-item__button&quot;&gt;
+        I am not active
+    &lt;/button&gt;
+&lt;/li&gt;
+</code></pre>
+<h3>AJAX request &lt;cm-ajax&gt;</h3>
+<p>The component is intended for sending data to the server with the possibility of calling the method for processing the received response, processing the <code>sended</code> event to which the response data are sent. The <code>serverRequest</code> mixin is used to send a request.</p>
+<p><em>Properties of the <code>&lt;cm-ajax/&gt;</code> item</em></p>
+<div class="md-table"><table>
+<thead>
+<tr>
+<th style="text-align: center">Name</th>
+<th style="text-align: center">Type</th>
+<th style="text-align: center">Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">itemClass</td>
+<td style="text-align: center"><strong>String</strong></td>
+<td style="text-align: center"><em>undefined</em></td>
+<td>Additional class for the button</td>
+</tr>
+<tr>
+<td style="text-align: center">params</td>
+<td style="text-align: center"><strong>Object</strong></td>
+<td style="text-align: center"><code>{}</code></td>
+<td>Data object to send</td>
+</tr>
+<tr>
+<td style="text-align: center">url*</td>
+<td style="text-align: center"><strong>String</strong></td>
+<td style="text-align: center"><em>undefined</em></td>
+<td><em>Required parameter</em>. Request address</td>
+</tr>
+<tr>
+<td style="text-align: center">method</td>
+<td style="text-align: center"><strong>String</strong></td>
+<td style="text-align: center"><code>get</code></td>
+<td>The method for conducting the request; is limited to <code>get</code>, <code>put</code>, <code>post</code>, <code>delete</code>, <code>patch</code> options</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Events called by the <code>&lt;cm-ajax/&gt;</code> item</em></p>
+<div class="md-table"><table>
+<thead>
+<tr>
+<th style="text-align: center">Name</th>
+<th style="text-align: center">Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center">sended</td>
+<td style="text-align: center">data (<code>Object</code>)</td>
+<td>Is called after receiving a response and transmits the received data</td>
+</tr>
+</tbody>
+</table></div>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;cm-ajax
+        method=&quot;post&quot;
+        url=&quot;https://httpbin.org/post&quot;
+        :params=&quot;{param1: 'one', param2: 'two'}&quot;
+        @sended=&quot;({ data }) =&gt; $notify({ group:'right-b', text: JSON.stringify(data) })&quot;&gt;
+        Send request
+    &lt;/cm-ajax&gt;
+&lt;/context-menu&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <cm-ajax
+        method="post"
+        url="https://httpbin.org/post"
+        :params="{param1: 'one', param2: 'two'}"
+        @sended="({ data }) => $notify({ group:'right-b', text: JSON.stringify(data) })">
+        Send request
+    </cm-ajax>
+</context-menu>
+</div>
+<p>Below you can see the result in HTML</p>
+<pre v-pre><code class="language-html">&lt;li class=&quot;cm-item&quot;&gt;
+    &lt;button class=&quot;cm-item__button&quot;&gt;
+        Send request
+    &lt;/button&gt;
+&lt;/li&gt;
+</code></pre>
+<h2>Styling of the opening button</h2>
+<p>The button that opens the context menu can be changed using a <a href="https://ru.vuejs.org/v2/guide/components-slots.html" target="_blank">slot</a> named <code>toggler</code>.
+The content of the slot is placed inside the <code>&lt;button&gt;</code> tag, so it should not contain semantically-block elements (<code>&lt;div&gt;</code>). Block content must be represented as <code>&lt;span style=&quot;display:block;&quot;&gt;</code></p>
+<p><strong>Example</strong></p>
+<pre v-pre><code class="language-html">&lt;context-menu&gt;
+    &lt;span slot=&quot;toggler&quot; class=&quot;new-toggler&quot;&gt;Open me&lt;/span&gt;
+    &lt;cm-button&gt;
+        Click me!
+    &lt;/cm-button&gt;
+&lt;/context-menu&gt;
+
+&lt;style&gt;
+.new-toggler {
+    display: inline-block;
+    color: white;
+    background-color: lightseagreen;
+    border: 1px solid aqua;
+    padding: 5px 15px;
+    margin-bottom: 3px;
+    border-radius: 15px;
+    height: 30px;
+}
+&lt;/style&gt;
+</code></pre>
+<div class="vue-example">
+<context-menu>
+    <span slot="toggler" style="display: inline-block; color: white; background-color: lightseagreen; border: 1px solid aqua; padding: 5px 15px; margin-bottom: 3px; border-radius: 15px; height: 30px;">Open me</span>
+    <cm-button>
+        Click me!
+    </cm-button>
+</context-menu>
+</div>
+                    </div>
+                </div>
+            </div>
+
+                            <span class="frame__copyright">© 2019 - Proudly powered on <a href="https://www.awema.pl" target="_blank">Awema.PL Platform</a></span>
+            
+            
+
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
